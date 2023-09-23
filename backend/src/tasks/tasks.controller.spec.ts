@@ -62,7 +62,12 @@ describe('TasksController', () => {
 
         jest.spyOn(service, 'updateTask').mockReturnValue(updatedTask);
 
-        const result = controller.updateTask(updatedTask.done, taskId);
+        const result = controller.updateTask(updatedTask, taskId);
+
+        expect(service.updateTask).toHaveBeenCalledWith(
+          taskId,
+          updatedTask.done,
+        );
         expect(result).toBe(updatedTask);
       });
     });
