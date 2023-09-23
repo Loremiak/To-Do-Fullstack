@@ -9,13 +9,17 @@ interface TaskListProps {
 
 export const TaskList: React.FC<TaskListProps> = ({ tasks, onDeleteTask, onToggleTask }) => {
 	return (
-		<ul>
+		<ul className='task-list'>
 			{tasks.map(({ id, content, done }) => {
 				return (
-					<li key={id}>
+					<li className='list' key={id}>
 						<span className={done ? 'completed' : ''}>{content}</span>
-						<button onClick={() => onDeleteTask(id)}>Usuń</button>
-						<input checked={done} type='checkbox' onChange={() => onToggleTask(id)} />
+						<div className='input-button-container'>
+							<input className='input-task-list' checked={done} type='checkbox' onChange={() => onToggleTask(id)} />
+							<button className='button-task-list' onClick={() => onDeleteTask(id)}>
+								Usuń
+							</button>
+						</div>
 					</li>
 				);
 			})}

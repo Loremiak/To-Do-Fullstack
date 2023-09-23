@@ -36,9 +36,11 @@ const App: React.FC = () => {
 
 	return (
 		<div className='App'>
-			<h1>Lista zadań</h1>
-			<TaskForm onAddTask={handleAddTask} />
-			<TaskList tasks={tasks} onDeleteTask={handleDeleteTask} onToggleTask={handleToggleTask} />
+			<div className='modal'>
+				<h1 className='header'>Lista zadań</h1>
+				<TaskForm onAddTask={handleAddTask} />
+				<TaskList tasks={tasks} onDeleteTask={handleDeleteTask} onToggleTask={handleToggleTask} />
+			</div>
 		</div>
 	);
 };

@@ -1,0 +1,19 @@
+.input-form {
+	padding: 1rem 2rem;
+	border: 1px solid transparent;
+	font-size: 1.5rem;
+}
+
+.button-form {
+	border: none;
+	cursor: pointer;
+	font-size: 1.5rem;
+	padding: 1rem 2rem;
+	font-weight: bold;
+	transition: all 0.2s ease-in-out;
+	border: 1px solid black;
+}
+
+.button-form:hover {
+	background-color: gray;
+}

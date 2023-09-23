@@ -30,7 +30,7 @@ export class TasksController {
   }
 
   @Patch(':id')
-  updateTask(@Body() done: boolean, @Param('id') id: string): Task {
-    return this.tasksService.updateTask(id, done);
+  updateTask(@Body() task: Task, @Param('id') id: string): Task {
+    return this.tasksService.updateTask(id, task.done);
   }
 }

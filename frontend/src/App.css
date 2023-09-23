@@ -1,3 +1,49 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
 .App {
 	text-align: center;
+	background-image: url('https://images.pexels.com/photos/1261728/pexels-photo-1261728.jpeg?auto=compress&cs=tinysrgb&w=2920&h=2080&dpr=1');
+	min-height: 100vh;
+	min-width: auto;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	transition: all 0.3s ease-in-out;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+}
+
+.modal {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 2rem;
+	padding: 5rem;
+	-webkit-backdrop-filter: blur(20px);
+	backdrop-filter: blur(20px);
+	border-radius: 30px;
+}
+
+.header {
+	font-size: 3.5rem;
 }

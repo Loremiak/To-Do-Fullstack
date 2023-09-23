@@ -34,7 +34,7 @@ export const removeTask = async (taskId: string): Promise<void> => {
 	try {
 		await axios.delete(`${BASE_URL}tasks/${taskId}`);
 	} catch (error) {
-		console.error('Wystąpił błąd przy usuwaniu taska o id:', taskId);
+		console.error('Wystąpił błąd przy usuwaniu zadania o id:', taskId);
 	}
 };
 
