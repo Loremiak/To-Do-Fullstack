@@ -4,10 +4,10 @@ import { v4 as uuidv4 } from 'uuid';
 
 @Injectable()
 export class TasksService {
-  private todosData = [];
+  private tasksList = [];
 
   getTasks(): Task[] {
-    return this.todosData;
+    return this.tasksList;
   }
 
   createTask(task: Task): Task {
@@ -15,20 +15,20 @@ export class TasksService {
       id: uuidv4(),
       ...task,
     };
-    this.todosData = [...this.todosData, newTask];
+    this.tasksList = [...this.tasksList, newTask];
     return newTask;
   }
 
   deleteTask(id: string): Task {
-    const taskToDelete = this.todosData.find((task) => task.id === id);
-    this.todosData = this.todosData.filter((task) => task.id !== id);
+    const taskToDelete = this.tasksList.find((task) => task.id === id);
+    this.tasksList = this.tasksList.filter((task) => task.id !== id);
     return taskToDelete;
   }
 
   updateTask(id: string, done: boolean): Task {
-    this.todosData = this.todosData.map((task) =>
+    this.tasksList = this.tasksList.map((task) =>
       task.id === id ? { ...task, done } : task,
     );
-    return this.todosData.find((task) => task.id === id);
+    return this.tasksList.find((task) => task.id === id);
   }
 }

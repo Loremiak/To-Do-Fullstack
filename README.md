@@ -1,6 +1,6 @@
 ## General info
 
-This is a to do app with possibility to add, mark done or delete task.
+This is to do app with possibility to add, mark done or delete task.
 
 ## Technologies
 
