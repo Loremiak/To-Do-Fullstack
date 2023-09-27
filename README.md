@@ -48,8 +48,13 @@ Backend:
 http://localhost:3001/tasks
 ```
 
-## Example screens
+## Example screenshots
 
 1. Frontend:
 
-2. Backend:
+![Screenshot 2023-09-27 132848](https://github.com/Loremiak/To-Do-Fullstack/assets/99645860/8ca86b16-ede7-4d34-b40b-0314e5d72984)
+![Screenshot 2023-09-27 132946](https://github.com/Loremiak/To-Do-Fullstack/assets/99645860/a5bfb945-c5e2-41d9-8f20-a523e89480bc)
+
+
+3. Backend:
+![Screenshot 2023-09-27 133006](https://github.com/Loremiak/To-Do-Fullstack/assets/99645860/97bbd6a9-cd12-4fde-922a-0fd033425b37)
